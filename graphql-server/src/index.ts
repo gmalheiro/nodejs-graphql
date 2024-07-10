@@ -6,7 +6,8 @@ import { typeDefs } from "../schema";
 const server = new ApolloServer({
     typeDefs
     // typedefs = description of our datatypes and the relationship they have with other data
-    // resolvers =  Resolver functions are determine how we respond to queries for different data on the graph
+    /* resolvers =  Resolver functions are determine how we respond to queries for different data on the graph 
+    We make resolver functions to handle the queries based on our schema and types*/
 });
 
 const { url } = await startStandaloneServer(server, {

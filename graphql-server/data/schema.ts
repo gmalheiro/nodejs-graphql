@@ -3,20 +3,23 @@ export const typeDefs = `#graphql
   id: ID!
   title: String! # Use ! when you want a field to be not null
   platform: [String!]!
+  reviews:[Review!]
+  author:Author!
   }
 
   type Review {
     id: ID!
-    rating: Int,
-    content:String!,
-    author_id:ID!,
-    game_id:ID!
+    rating: Int
+    content:String!
+    game:Game!
+    author:Author!
   }
 
   type Author {
     id: ID!
     name: String!
     verified: Boolean!
+    reviews:[Review!]
   }
 
   #The Query type is something that every graphql schema needs  
